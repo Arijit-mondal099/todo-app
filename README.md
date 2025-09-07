@@ -77,6 +77,32 @@ Make sure you have the following installed:
    npm install
    ```
 
+### ⚙️ Environment Setup
+
+Before running the project, create `.env` files for both **backend** and **frontend**.
+
+---
+
+#### 📌 Backend (`todo-server/.env`)
+
+```env
+# Server port
+PORT=4000
+
+# Database connection (e.g., MongoDB URI)
+DB_URI=mongodb://localhost:27017/todo-app
+
+# Secret key for JWT authentication
+JWT_SECRET=your-secret-key
+```
+
+#### 📌 Frontend (`todo-client/.env`)
+
+```env
+# Backend API URL
+VITE_API_URL=http://localhost:4000
+```
+
 ### Development
 
 1. **Start the backend server**
@@ -157,7 +183,7 @@ curl http://localhost:4000/api/todos
 
 ### Frontend
 
-- **React 18** - UI library
+- **React 19** - UI library
 - **TypeScript** - Type safety
 - **Vite** - Build tool and dev server
 - **Shadcn UI** - Component library
