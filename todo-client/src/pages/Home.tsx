@@ -52,8 +52,6 @@ const Home: React.FC = () => {
     );
   }
 
-  console.log(todos)
-
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="pt-10 flex gap-2 justify-between">
@@ -136,9 +134,7 @@ const Home: React.FC = () => {
 
       <section className="pt-10 grid items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
         {todos?.length ? (
-          todos.map((t) => (
-            <TodoCard key={t._id} todo={t} />
-          ))
+          todos.map((t) => <TodoCard key={t._id} todo={t} />)
         ) : (
           <p className="text-2xl font-medium text-gray-500 col-span-4">
             Looks like todo haven&apos;t been created yet!
